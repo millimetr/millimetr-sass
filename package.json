@@ -4,10 +4,10 @@
   "scripts": {
     "start:scss": "node-sass src/scss/styles.scss --output src/static/assets --watch",
     "start:millimetr": "millimetr develop",
-    "start": "npm-run-all --parallel start:js start:millimetr",
+    "start": "npm-run-all --parallel start:scss start:millimetr",
     "build:scss": "node-sass src/scss/styles.scss --output src/static/assets ---output-style compressed",
     "build:millimetr": "millimetr build",
-    "build": "npm run build:js && npm run build:millimetr"
+    "build": "npm run build:scss && npm run build:millimetr"
   },
   "devDependencies": {
     "@millimetr/cli": "^1.1.4",
